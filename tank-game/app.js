@@ -39,10 +39,10 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/moveTank', moveTank.index);
+app.get('/moveTank/:move', moveTank.index);
 app.get('/fire', fire.index);
-app.get('/rotate', rotate.index);
-app.get('/login', login.index);
+app.get('/rotate/:rot', rotate.index);
+app.get('/login/:name', login.index);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
